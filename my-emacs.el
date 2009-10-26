@@ -9,3 +9,6 @@
 ; Загружаем остальные модули.
 (load "my-basics.el")
 (load "my-color-theme.el")
+
+; Режимы редактирования
+(load "my-mode-haskell.el")
