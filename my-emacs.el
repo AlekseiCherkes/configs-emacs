@@ -12,3 +12,4 @@
 
 ; Режимы редактирования
 (load "my-mode-haskell.el")
+(load "my-mode-c.el")
