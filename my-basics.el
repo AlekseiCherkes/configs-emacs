@@ -156,6 +156,8 @@
 
 (global-set-key [\C-backspace] 'backward-kill-word)
 
+(global-set-key [C-f5] 'compile)
+
 ;; Lines wrap
 (setq default-truncate-lines t) ;; disable line wrap
 (setq truncate-partial-width-windows nil) ;; make side by side buffers function the same as the main window
