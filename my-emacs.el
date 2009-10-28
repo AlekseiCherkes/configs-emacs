@@ -9,7 +9,11 @@
 ; Загружаем остальные модули.
 (load "my-basics.el")
 (load "my-color-theme.el")
+(load "my-other.el")
 
 ; Режимы редактирования
-(load "my-mode-haskell.el")
 (load "my-mode-c.el")
+(load "my-mode-haskell.el")
+
+; Запускаем программы
+(load "my-autorun.el")
