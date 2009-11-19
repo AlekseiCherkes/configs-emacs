@@ -14,6 +14,7 @@
 ; Режимы редактирования
 (load "my-mode-c.el")
 (load "my-mode-haskell.el")
+(load "my-mode-cmake.el")
 
 ; Запускаем программы
 (load "my-autorun.el")
