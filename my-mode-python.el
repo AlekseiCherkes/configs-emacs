@@ -23,6 +23,9 @@
 	(local-set-key "\C-c\C-c" 'my-python-compile)
       t))
 
+(setq auto-mode-alist (cons '("SConstruct" . python-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("SConscript" . python-mode) auto-mode-alist))
+
 ;; FlyMakes will use pyflakes
 
 ;; (when (load "flymake" t) 
