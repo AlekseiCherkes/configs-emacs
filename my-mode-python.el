@@ -2,18 +2,21 @@
 ;; PYTHON
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; Use "python -i" for run python session in eshell on Windows
+
 (setq python-python-command "python")
 
 (defun my-python-compile ()
   "Use compile to run python programs"
   (interactive)
-  (compile (concat "python " (buffer-name))))
+  (compile (concat "python" (buffer-name))))
 (setq compilation-scroll-output t)
 
 (autoload 'python-mode "python" "Python mode" t)
 ;(autoload 'pair-mode "pair-mode" "Pair Mode" t)
-(setq auto-mode-alist
-    (cons '("\\.py$" . python-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.py$" . python-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("SConstruct" . python-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("SConscript" . python-mode) auto-mode-alist))
 
 (add-hook 'python-mode-hook
     '(lambda ()
@@ -22,9 +25,6 @@
         (outline-minor-mode 1)
 	(local-set-key "\C-c\C-c" 'my-python-compile)
       t))
-
-(setq auto-mode-alist (cons '("SConstruct" . python-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("SConscript" . python-mode) auto-mode-alist))
 
 ;; FlyMakes will use pyflakes
 
