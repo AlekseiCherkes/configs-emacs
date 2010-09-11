@@ -16,6 +16,7 @@
 (load "my-mode-haskell.el")
 (load "my-mode-cmake.el")
 (load "my-mode-python.el")
+(load "my-mode-slime.el")
 
 ; Запускаем программы
 (load "my-autorun.el")
