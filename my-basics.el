@@ -46,6 +46,25 @@
 (global-set-key "\C-xm" 'execute-extended-command)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Shell customization.
+;; M-x shell -- вызовы внешнего shell
+;; M-x eshell -- реализация shell с помощью ELisp.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; For cygwin (on windows).
+
+; It is the variable that controls which
+; shell Emacs uses when it wants to run a 
+; shell command.
+
+(setq shell-file-name  "bash")
+
+; It is the variable that controls which 
+; shell M-x shell starts up.
+
+(setq explicit-shell-file-name "bash")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Перемещение между окнами с помощью Alt + Up/Down/Left/Right
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
