@@ -10,6 +10,7 @@
 (load "my-basics.el")
 (load "my-color-theme.el")
 (load "my-other.el")
+(load "my-logtailng.el")
 
 ; Режимы редактирования
 (load "my-mode-c.el")
