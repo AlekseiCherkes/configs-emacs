@@ -150,7 +150,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Other
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(cua-mode)
+
+(if (eq system-type `windows-nt)
+    (cua-mode))
 
 ; IBuffer by default
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
