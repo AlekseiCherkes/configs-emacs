@@ -21,6 +21,13 @@
 (global-set-key "\C-ca" 'org-agenda) 
 (global-set-key "\C-cb" 'org-iswitchb)
 
+;; GDT
 
+(setq my-org-path 
+      (if (eq system-type `windows-nt)
+	  "~/org/main.org"
+	"~/Documents/my/org/main.org"))
+
+(add-to-list 'org-agenda-files my-org-path)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -210,6 +210,26 @@
 (global-set-key [f12] 'toggle-truncate-lines) ;; Add F12 to toggle line wrap
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Calendar
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; `american' - month/day/year
+;; `european' - day/month/year
+;; `iso'      - year/month/day
+
+;(calendar-set-date-style `iso)
+(setq calendar-week-start-day 1
+      calendar-day-name-array
+      ["Воскресенье" "Понедельник" "Вторник" "Среда"
+       "Четверг" "Пятница" "Суббота"]
+      calendar-month-name-array
+      ["Январь" "Февраль" "Март" "Апрель" "Май" 
+       "Июнь" "Июль" "Август" "Сентябрь"
+       "Октябрь" "Ноябрь" " Декабрь"]
+      calendar-day-abbrev-array
+      ["Вс" "Пн" "Вт" "Ср" "Чт" "Пт" "Сб"])
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; FONTS
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
