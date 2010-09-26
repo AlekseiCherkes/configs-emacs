@@ -151,8 +151,18 @@
 ;; Other
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(defun my-winwows-related ()
+  (cua-mode))
+
+(defun my-macos-related ()
+  (tabbar-mode -1)		       ; no tabbar
+  (one-buffer-one-frame-mode -1)       ; no one-buffer-per-frame
+  (setq special-display-regexps nil)   ; do not open certain buffers in special windows/frames
+  )
+
 (if (eq system-type `windows-nt)
-    (cua-mode))
+    (my-windows-related)
+    (my-macos-related))
 
 ; IBuffer by default
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
