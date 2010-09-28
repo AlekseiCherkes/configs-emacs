@@ -151,7 +151,7 @@
 ;; Other
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defun my-winwows-related ()
+(defun my-windows-related ()
   (cua-mode))
 
 (defun my-macos-related ()
