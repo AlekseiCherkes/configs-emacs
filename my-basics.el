@@ -230,6 +230,22 @@
       ["Вс" "Пн" "Вт" "Ср" "Чт" "Пт" "Сб"])
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Dired mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Hide files I don't want to see, 
+;; such as .fxo, backups and autosave files.
+;;
+;; M-o -- toggle ommit mode 
+
+(require 'dired-x)
+
+(add-to-list 'dired-omit-extensions ".fxo")
+(add-hook 'dired-mode-hook 
+	  (lambda () (dired-omit-mode 1)) 
+	  't) ;; APPEND
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; FONTS
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
