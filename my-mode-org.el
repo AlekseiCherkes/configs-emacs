@@ -22,12 +22,15 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 
 ;; GDT
-
-(setq my-org-path 
+(setq org-directory 
       (if (eq system-type `windows-nt)
-	  "~/org/main.org"
-	"~/Documents/my/org/main.org"))
+	  "~/Dropbox/Org/"
+	"~/Dropbox/Org/"))
 
-(add-to-list 'org-agenda-files my-org-path)
+(setq org-agenda-files 
+	     (mapcar (lambda (x) (concat org-directory x)) 
+		     `("main.org")))
+
+;; Remember mode
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
