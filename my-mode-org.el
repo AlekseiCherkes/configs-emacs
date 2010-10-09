@@ -2,6 +2,7 @@
 ;; Org-mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(setq Info-directory-list Info-default-directory-list)
 (add-to-list 'Info-directory-list "~/emacs/site-packages/org-mode/doc")
 
 (add-to-list 'load-path "~/emacs/site-packages/org-mode/lisp")
