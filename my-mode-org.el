@@ -28,7 +28,7 @@
 
 (setq org-agenda-files 
 	     (mapcar (lambda (x) (concat org-directory x)) 
-		     `("next.org" "calendar.org" "waiting.org")))
+		     `("agenda.org" "next.org" "calendar.org" "waiting.org")))
 
 (defun my-org ()
   (interactive)
@@ -38,6 +38,7 @@
       '(("h" "Agenda and Home-related tasks"
 	 ((agenda "")
 	  (tags "CATEGORY=\"waiting\"")
+	  (tags "CATEGORY=\"agenda\"")
 	  (tags "CATEGORY=\"next\"" 
 		((org-agenda-prefix-format "  %-12:T")
 		 (org-agenda-sorting-strategy '(tag-up))))
