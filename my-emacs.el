@@ -24,7 +24,6 @@
 (load "my-mode-python.el")
 (load "my-mode-slime.el")
 (load "my-mode-org.el")
-(load "my-mode-asciidoc.el")
 
 ; Запускаем программы
 (load "my-autorun.el")
