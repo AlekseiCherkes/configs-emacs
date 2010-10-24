@@ -2,7 +2,7 @@
 ;; Color Them
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setq load-path (cons "~/emacs/site-packages/color-theme" load-path))
+(my-add-site-lisp "color-theme/")
 
 (require 'color-theme)
 (eval-after-load "color-theme"

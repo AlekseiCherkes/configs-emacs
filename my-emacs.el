@@ -1,10 +1,15 @@
-﻿; Устанавливаем файл для custom settings.
-(setq custom-file "~/emacs/my-custom.el")
-(load custom-file 'noerror)
-
 ; Дирректории с elisp кодом.
-(setq load-path (cons "~/emacs/" load-path))
-(setq load-path (cons "~/emacs/site-packages" load-path))
+(setq my-emacs-site-lisp-dir (concat my-emacs-dir "site-packages/"))
+
+(add-to-list `load-path my-emacs-dir)
+(add-to-list `load-path my-emacs-site-lisp-dir)
+
+(defun my-add-site-lisp (dir)
+  (add-to-list `load-path (concat my-emacs-site-lisp-dir dir)))
+
+; Устанавливаем файл для custom settings.
+(setq custom-file (concat my-emacs-dir "my-custom.el"))
+(load custom-file 'noerror)
 
 ; Загружаем остальные модули.
 (load "my-basics.el")
@@ -19,6 +24,7 @@
 (load "my-mode-python.el")
 (load "my-mode-slime.el")
 (load "my-mode-org.el")
+(load "my-mode-asciidoc.el")
 
 ; Запускаем программы
 (load "my-autorun.el")

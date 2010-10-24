@@ -2,7 +2,7 @@
 ;; Slime
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-to-list 'load-path "~/emacs/site-packages/slime/")
+(my-add-site-lisp "slime/")
 
 ; This variable holds a list of programs and if you invoke SLIME
 ; with a negative prefix argument, M-- M-x slime, you can select
