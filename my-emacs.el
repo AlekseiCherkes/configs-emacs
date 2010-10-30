@@ -23,6 +23,7 @@
 (load "my-mode-cmake.el")
 (load "my-mode-python.el")
 (load "my-mode-slime.el")
+(load "my-mode-scheme.el")
 (load "my-mode-org.el")
 
 ; Запускаем программы
