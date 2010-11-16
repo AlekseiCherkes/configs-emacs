@@ -168,11 +168,11 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
 
 ; Other stuff
-(setq tab-width 4)
+(setq-default tab-width 4)
+(setq-default c-basic-offset 4)
+;;(setq-default show-trailing-whitespace t)
 (setq transient-mark-mode t)
 (setq current-language-environment "UTF-8")
-(setq c-basic-offset 4)
-(setq show-trailing-whitespace t) 
 
 ; Hot key for view buffer size
 ;(global-set-key [\C-f8] '(buffer-size nil))
