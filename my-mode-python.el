@@ -23,6 +23,8 @@
      ;  (pair-mode 1)
         (eldoc-mode 1)
         (outline-minor-mode 1)
+		(setq python-indent 4)
+		(setq tab-width 4)
 	(local-set-key "\C-c\C-c" 'my-python-compile)
       t))
 
