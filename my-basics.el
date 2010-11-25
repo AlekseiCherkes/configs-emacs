@@ -17,7 +17,7 @@
 
 (set-keyboard-coding-system 'utf-8)
 (set-buffer-file-coding-system 'utf-8)
-(set-clipboard-coding-system 'utf-8)
+(set-clipboard-coding-system `utf-8)
 (set-language-environment-coding-systems 'utf-8)
 
 (prefer-coding-system 'utf-8)
@@ -26,6 +26,9 @@
 ; Нужно для корректной вставки русских букв из других программ 
 ; через буффер обмена. Как работает не знаю.
 (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING))
+
+(setq default-file-name-coding-system
+ (if (eq system-type `windows-nt) `cp1251 utf-8))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; EFFECTIVE EMACS
