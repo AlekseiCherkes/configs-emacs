@@ -28,7 +28,7 @@
 (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING))
 
 (setq default-file-name-coding-system
- (if (eq system-type `windows-nt) `cp1251 utf-8))
+ (if (eq system-type `windows-nt) `cp1251 `utf-8))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; EFFECTIVE EMACS
