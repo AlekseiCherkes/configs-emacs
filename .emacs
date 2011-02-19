@@ -21,6 +21,13 @@
 ;; (dired "E:/home/temp")
 ;; (find-file "E:/home/dropbox/My Dropbox/work/work.org")
 
+;; MacBook
+;; (dired "~/Dropbox/")
+;; (dired "~/Dropbox/Org/")
+;; (dired "~/Work/Sakrament/")
+
+;; (find-file "~/Dropbox/Org/someday.org")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Emacs
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
