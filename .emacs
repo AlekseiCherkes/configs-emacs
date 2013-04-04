@@ -6,7 +6,7 @@
 (load (concat my-emacs-dir "my-emacs.el"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; System dependent autorun
+;; Machine dependent autorun
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Wargaming's office machine

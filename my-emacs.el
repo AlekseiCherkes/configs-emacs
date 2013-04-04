@@ -14,7 +14,6 @@
 ; Загружаем остальные модули.
 (load "my-basics.el")
 (load "my-color-theme.el")
-(load "my-other.el")
 (load "my-logtailng.el")
 
 ; Режимы редактирования
@@ -25,6 +24,3 @@
 (load "my-mode-slime.el")
 (load "my-mode-scheme.el")
 (load "my-mode-org.el")
-
-; Запускаем программы
-(load "my-autorun.el")

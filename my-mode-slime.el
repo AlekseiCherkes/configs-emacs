@@ -2,7 +2,7 @@
 ;; Slime
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(my-add-site-lisp "slime/")
+;;(my-add-site-lisp "slime/")
 
 ; This variable holds a list of programs and if you invoke SLIME
 ; with a negative prefix argument, M-- M-x slime, you can select
@@ -11,15 +11,15 @@
 ; the list will be used. The elements of the list should look 
 ; like 
 
-(setq slime-lisp-implementations
-      '((sbcl ("sbcl"))
-	(clisp ("clisp -ansi -q -K full") :coding-system utf-8-unix)))
+;;(setq slime-lisp-implementations
+;;      '((sbcl ("sbcl"))
+;;	(clisp ("clisp -ansi -q -K full") :coding-system utf-8-unix)))
 
 ; Не использую, т.е есть более расширенна версия 
 ; (slime-lisp-implementations)
 ;(setq inferior-lisp-program "sbcl") ; your Lisp system
 
-(require 'slime)
-(slime-setup) ; (slime-setup '(slime-fancy))
+;;(require 'slime)
+;;(slime-setup) ; (slime-setup '(slime-fancy))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

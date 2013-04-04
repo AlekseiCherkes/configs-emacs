@@ -31,6 +31,16 @@
  (if (eq system-type `windows-nt) `cp1251 `utf-8))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; USEFULL
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(server-mode)
+(setq visible-bell t)
+
+;;(require 'workspaces)
+;;(define-key global-map (kbd "C-<tab>") 'workspace-controller)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; EFFECTIVE EMACS
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
