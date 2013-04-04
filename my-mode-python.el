@@ -25,6 +25,9 @@
         (outline-minor-mode 1)
 		(setq python-indent 4)
 		(setq tab-width 4)
+		;; whitespaces
+		;;(setq whitespace-style '(space-mark tab-mark))
+		;;(whitespace-mode)
 	(local-set-key "\C-c\C-c" 'my-python-compile)
       t))
 
