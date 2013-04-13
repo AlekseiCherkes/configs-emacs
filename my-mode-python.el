@@ -18,6 +18,22 @@
 (setq auto-mode-alist (cons '("SConstruct" . python-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("SConscript" . python-mode) auto-mode-alist))
 
+(defun my-syntax-table ()
+  ;;(modify-syntax-entry ?- "w")
+  ;;(modify-syntax-entry ?' "w")
+  ;; (modify-syntax-entry ?\" "w")
+  ;; (modify-syntax-entry ?_ "w")
+  ;; (modify-syntax-entry ?  "w")
+  ;; (modify-syntax-entry ?, "w")
+  ;; (modify-syntax-entry ?[ "w")
+  ;; (modify-syntax-entry ?] "w")
+  ;; (modify-syntax-entry ?{ "w")
+  ;; (modify-syntax-entry ?} "w")
+  ;; (modify-syntax-entry ?. "w")
+  ;; (modify-syntax-entry ?, "w")
+  ;; (message "my-message")
+)
+
 (defun my-whitespace-cleanup ()
     (whitespace-cleanup)
      nil)
@@ -29,6 +45,7 @@
         (outline-minor-mode 1)
 		(setq python-indent 4)
 		(setq tab-width 4)
+		(my-syntax-table)
 		; Delete trailing whitespaces on save
 		(make-local-variable 'write-file-functions) ; for python-mode only
 		(add-to-list 'write-file-functions 'my-whitespace-cleanup)

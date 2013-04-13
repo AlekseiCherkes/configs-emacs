@@ -46,6 +46,10 @@
 ; ibuffer by default
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
 
+; word-stepping
+(global-set-key (kbd "C-<right>") 'my-forward-same-syntax)
+(global-set-key (kbd "C-<left>") 'my-backward-same-syntax)
+
 ; backward-kill
 (global-set-key [\C-backspace] 'backward-kill-word)
 

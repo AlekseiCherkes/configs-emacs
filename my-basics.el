@@ -51,6 +51,24 @@
 (column-number-mode 1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Word stepping
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun my-forward-same-syntax ()
+  (interactive)
+  (if (eq (char-syntax (char-after (point)))
+		  (char-syntax (char-after (+ (point) 1))))
+	  (skip-syntax-forward (char-to-string (char-syntax (char-after))))
+	(forward-char)))
+
+(defun my-backward-same-syntax ()
+  (interactive)
+  (if (eq (char-syntax (char-before (point)))
+		  (char-syntax (char-before (- (point) 1))))
+	  (skip-syntax-backward (char-to-string (char-syntax (char-before))))
+	(backward-char)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Smoth scrolling
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
