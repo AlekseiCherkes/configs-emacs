@@ -24,3 +24,6 @@
 (load "my-mode-slime.el")
 (load "my-mode-scheme.el")
 (load "my-mode-org.el")
+
+; Назначаем глобальные сочетания клавиш
+(load "my-globals.el")

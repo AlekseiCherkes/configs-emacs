@@ -58,12 +58,4 @@
 
 ;; Remember mode
 
-;; Key bindings
-;; The last three lines define global keys for some 
-;; commands — please choose suitable keys yourself.
-(global-set-key "\C-cl" 'org-store-link) 
-(global-set-key "\C-ca" 'org-agenda) 
-(global-set-key "\C-cb" 'org-iswitchb)
-(global-set-key "\C-co" 'my-org)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

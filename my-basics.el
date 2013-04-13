@@ -37,10 +37,20 @@
 (server-mode)
 (setq visible-bell t)
 
+; Inhibit startup screen
+(setq inhibit-startup-message t)
+
 ;;(require 'workspaces)
 ;;(define-key global-map (kbd "C-<tab>") 'workspace-controller)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Show line and column numbers in all buffers
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(line-number-mode 1)
+(column-number-mode 1)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Smoth scrolling
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -67,9 +77,6 @@
 ;; Отвечаем y/n вместо yes/no.
 (fset 'yes-or-no-p 'y-or-n-p)
 
-(global-set-key "\C-x\C-m" 'execute-extended-command)
-(global-set-key "\C-xm" 'execute-extended-command)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Shell customization.
 ;; M-x shell -- вызовы внешнего shell
@@ -94,7 +101,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'windmove)
-(windmove-default-keybindings 'meta)
 
 (setq win-step 10)
 
@@ -152,20 +158,6 @@
    ((equal "mid"   (win-resize-left-or-right)) (enlarge-window-horizontally (- win-step)))
    ))
 
-(global-set-key [C-M-down] 'win-resize-minimize-horiz)
-(global-set-key [C-M-up] 'win-resize-enlarge-horiz)
-(global-set-key [C-M-left] 'win-resize-minimize-vert)
-(global-set-key [C-M-right] 'win-resize-enlarge-vert)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Working with bookmarks
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(global-set-key [f5] 'bookmark-set)
-(global-set-key [f6] 'bookmark-jump)
-(global-set-key [C-f6] 'bookmark-jump-other-window)
-(global-set-key [f7] 'bookmark-bmenu-list)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Working with desktops
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -178,10 +170,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun my-windows-related ()
-  (cua-mode))
+  ;(cua-mode)
+)
 
 (defun my-macos-related ()
-  (tabbar-mode -1)		       ; no tabbar
+  (tabbar-mode -1)		               ; no tabbar
   (one-buffer-one-frame-mode -1)       ; no one-buffer-per-frame
   (setq special-display-regexps nil)   ; do not open certain buffers in special windows/frames
   )
@@ -190,18 +183,12 @@
     (my-windows-related)
     (my-macos-related))
 
-; IBuffer by default
-(global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
-
 ; Other stuff
 (setq-default tab-width 4)
 (setq-default c-basic-offset 4)
 ;;(setq-default show-trailing-whitespace t)
 (setq transient-mark-mode t)
 (setq current-language-environment "UTF-8")
-
-; Hot key for view buffer size
-;(global-set-key [\C-f8] '(buffer-size nil))
 
 ; Подсветка строки на которой находится курсор
 ; (highlight-current-line-on t)
@@ -226,14 +213,9 @@
 
 ;;(desktop-save-mode t)
 
-(global-set-key [\C-backspace] 'backward-kill-word)
-
-(global-set-key [C-f5] 'compile)
-
 ;; Lines wrap
 (setq default-truncate-lines t) ;; disable line wrap
 (setq truncate-partial-width-windows nil) ;; make side by side buffers function the same as the main window
-(global-set-key [f12] 'toggle-truncate-lines) ;; Add F12 to toggle line wrap
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Calendar
