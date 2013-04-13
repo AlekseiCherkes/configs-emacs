@@ -18,6 +18,10 @@
 (setq auto-mode-alist (cons '("SConstruct" . python-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("SConscript" . python-mode) auto-mode-alist))
 
+(defun my-whitespace-cleanup ()
+    (whitespace-cleanup)
+     nil)
+
 (add-hook 'python-mode-hook
     '(lambda ()
      ;  (pair-mode 1)
@@ -25,31 +29,31 @@
         (outline-minor-mode 1)
 		(setq python-indent 4)
 		(setq tab-width 4)
-		;; whitespaces
-		;;(setq whitespace-style '(space-mark tab-mark))
-		;;(whitespace-mode)
+		; Delete trailing whitespaces on save
+		(make-local-variable 'write-file-functions) ; for python-mode only
+		(add-to-list 'write-file-functions 'my-whitespace-cleanup)
 	(local-set-key "\C-c\C-c" 'my-python-compile)
       t))
 
 ;; FlyMakes will use pyflakes
 
-;; (when (load "flymake" t) 
-;;   (defun flymake-pyflakes-init () 
-;;     (let* ((temp-file (flymake-init-create-temp-buffer-copy 
-;; 		       'flymake-create-temp-inplace)) 
-;; 	   (local-file (file-relative-name 
-;; 			temp-file 
+;; (when (load "flymake" t)
+;;   (defun flymake-pyflakes-init ()
+;;     (let* ((temp-file (flymake-init-create-temp-buffer-copy
+;; 		       'flymake-create-temp-inplace))
+;; 	   (local-file (file-relative-name
+;; 			temp-file
 ;; 			(file-name-directory buffer-file-name))
 ;; 		       )
-;; 	   ) 
+;; 	   )
 ;;       (list "pyflakes" (list local-file))
 ;;       )
-;;     ) 
-  
-;;   (add-to-list 'flymake-allowed-file-name-masks 
+;;     )
+
+;;   (add-to-list 'flymake-allowed-file-name-masks
 ;; 	       '("\\.py\\'" flymake-pyflakes-init)
 ;; 	       )
-;;   ) 
+;;   )
 
 ;; (add-hook 'find-file-hook 'flymake-find-file-hook)
 
