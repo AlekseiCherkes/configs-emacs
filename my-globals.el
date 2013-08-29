@@ -43,24 +43,24 @@
 (global-set-key (kbd "C-c r") 'delete-trailing-whitespace)
 (global-set-key (kbd "C-c q") 'toggle-truncate-lines)
 
-; ibuffer by default
+;; ibuffer by default
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
 
-; word-stepping
+;; word-stepping
 (global-set-key (kbd "C-<right>") 'my-forward-same-syntax)
 (global-set-key (kbd "C-<left>") 'my-backward-same-syntax)
 
-; backward-kill
+;; backward-kill
 (global-set-key [\C-backspace] 'backward-kill-word)
 
-; windows resizing
-(global-set-key [C-M-down] 'win-resize-minimize-horiz)
-(global-set-key [C-M-up] 'win-resize-enlarge-horiz)
-(global-set-key [C-M-left] 'win-resize-enlarge-vert)
-(global-set-key [C-M-right] 'win-resize-minimize-vert)
+;; windows resizing
+;(global-set-key [C-M-down] 'win-resize-minimize-horiz)
+;(global-set-key [C-M-up] 'win-resize-enlarge-horiz)
+;(global-set-key [C-M-left] 'win-resize-enlarge-vert)
+;(global-set-key [C-M-right] 'win-resize-minimize-vert)
 
-; Meta + arrows for moving across the windows
-(windmove-default-keybindings 'meta)
+;; Meta + arrows for moving across the windows
+;(windmove-default-keybindings 'meta)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Working with bookmarks
