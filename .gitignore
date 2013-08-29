@@ -1,1 +1,5 @@
+my-machine-dependant.el
 my-custom.el
+/elpa/*
+/eshell/*
+/auto-save-list/*
