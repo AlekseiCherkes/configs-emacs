@@ -192,9 +192,9 @@
 )
 
 (defun my-macos-related ()
-  (tabbar-mode -1)		               ; no tabbar
-  (one-buffer-one-frame-mode -1)       ; no one-buffer-per-frame
-  (setq special-display-regexps nil)   ; do not open certain buffers in special windows/frames
+  ;(tabbar-mode -1)		       ; no tabbar
+  ;(one-buffer-one-frame-mode -1)      ; no one-buffer-per-frame
+  ;(setq special-display-regexps nil)  ; do not open certain buffers in special windows/frames
   )
 
 (if (eq system-type `windows-nt)
