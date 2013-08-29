@@ -25,6 +25,7 @@
 (load "my-mode-scheme.el")
 (load "my-mode-org.el")
 (load "my-mode-auctex.el")
+(load "my-magit.el")
 
 ; Назначаем глобальные сочетания клавиш
 (load "my-globals.el")
