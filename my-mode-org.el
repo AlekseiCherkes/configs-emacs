@@ -2,15 +2,6 @@
 ;; Org-mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setq Info-directory-list Info-default-directory-list)
-(add-to-list 'Info-directory-list "~/emacs/site-packages/org-mode/doc")
-
-(my-add-site-lisp "org-mode/lisp")
-(my-add-site-lisp "org-mode/contrib/lisp")
-
-(require 'org-install)
-(org-reload) ; we don't need default emacs version
-
 ;; With this setup, all files with extension ‘.org’ 
 ;; will be put into Org mode.
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode)) 

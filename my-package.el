@@ -14,7 +14,7 @@
 (require 'cl)
 
 (defvar my-packages
-  '(auctex magit)
+  '(org auctex magit cmake-mode haskell-mode quack)
   "A list of packages to ensure are installed at launch.")
  
 (defun my-packages-installed-p ()
