@@ -12,6 +12,7 @@
 (load custom-file 'noerror)
 
 ; Загружаем остальные модули.
+(load "my-package.el")
 (load "my-basics.el")
 (load "my-color-theme.el")
 (load "my-logtailng.el")
