@@ -1,3 +1,6 @@
+;; Можно читать info-файл (elisp) Key Binding Conventions, который находтся в
+;; ELisp Reference Manual => Programming Tips.
+
 ;; By official emacs documentation (info "Key Binding
 ;; Conventions") , the key space for users are the function
 ;; keys F5 to F9, and [Ctrl+c letter]. This is very
@@ -61,6 +64,12 @@
 
 ;; Meta + arrows for moving across the windows
 ;(windmove-default-keybindings 'meta)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Magit
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(global-set-key (kbd "C-c g") 'magit-status)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Working with bookmarks
