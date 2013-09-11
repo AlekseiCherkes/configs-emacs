@@ -205,8 +205,8 @@
 (setq-default tab-width 4)
 (setq-default c-basic-offset 4)
 ;;(setq-default show-trailing-whitespace t)
-(setq transient-mark-mode t)
 (setq current-language-environment "UTF-8")
+(delete-selection-mode t) ;; Удалять выделенный регион при вводе нового текста.
 
 ; Подсветка строки на которой находится курсор
 ; (highlight-current-line-on t)
