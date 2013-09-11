@@ -3,3 +3,4 @@ my-custom.el
 /elpa/*
 /eshell/*
 /auto-save-list/*
+/bookmarks

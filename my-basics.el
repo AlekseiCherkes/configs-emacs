@@ -43,6 +43,14 @@
 ;;(require 'workspaces)
 ;;(define-key global-map (kbd "C-<tab>") 'workspace-controller)
 
+(show-paren-mode t)
+
+;; Show time and date
+(setq display-time-day-and-date nil)
+(setq display-time-default-load-average nil)
+(setq display-time-24hr-format t)
+(display-time-mode t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Show line and column numbers in all buffers
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
