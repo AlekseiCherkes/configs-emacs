@@ -231,8 +231,7 @@
 ;(display-time-mode)
 
 ; Переключалка буфферов
-(iswitchb-mode 1)
-;(ido-mode 1)
+(ido-mode t)
 
 ;; Можно сохранять сессию перед выходом.
 ;(desktop-save-mode t)
