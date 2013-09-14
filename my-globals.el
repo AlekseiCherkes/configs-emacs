@@ -45,6 +45,7 @@
 (global-set-key (kbd "C-c T") 'tabify)
 (global-set-key (kbd "C-c r") 'delete-trailing-whitespace)
 (global-set-key (kbd "C-c q") 'toggle-truncate-lines)
+(global-set-key (kbd "C-c f") 'fci-mode)
 
 ;; ibuffer by default
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window)

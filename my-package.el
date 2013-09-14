@@ -3,8 +3,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+
+(add-to-list 'package-archives
+			 '("melpa" . "http://melpa.milkbox.net/packages/"))
+
+(add-to-list 'package-archives
+			 '("marmalade" . "http://marmalade-repo.org/packages/"))
+
 (package-initialize)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -13,10 +18,10 @@
 
 (require 'cl)
 
-(defvar my-packages
-  '(org auctex magit cmake-mode haskell-mode quack auto-complete)
+(defvar my-packages '(org auctex magit cmake-mode haskell-mode
+					  quack auto-complete fill-column-indicator)
   "A list of packages to ensure are installed at launch.")
- 
+
 (defun my-packages-installed-p ()
   (loop for p in my-packages
         when (not (package-installed-p p)) do (return nil)
