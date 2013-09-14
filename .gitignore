@@ -4,3 +4,5 @@ my-custom.el
 /eshell/*
 /auto-save-list/*
 /bookmarks
+/ac-comphist.dat
+/url/cookies

@@ -243,6 +243,7 @@
 (setq truncate-partial-width-windows nil) ;; make side by side buffers function the same as the main window
 
 ;; auto complete
+(require 'auto-complete)
 (global-auto-complete-mode t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
