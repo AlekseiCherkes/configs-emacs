@@ -242,6 +242,9 @@
 (setq default-truncate-lines t) ;; disable line wrap
 (setq truncate-partial-width-windows nil) ;; make side by side buffers function the same as the main window
 
+;; auto complete
+(global-auto-complete-mode t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Calendar
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
