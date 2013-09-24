@@ -19,7 +19,8 @@
 (require 'cl)
 
 (defvar my-packages '(org auctex magit cmake-mode haskell-mode
-					  quack auto-complete fill-column-indicator)
+					  quack auto-complete fill-column-indicator 
+					  yasnippet)
   "A list of packages to ensure are installed at launch.")
 
 (defun my-packages-installed-p ()

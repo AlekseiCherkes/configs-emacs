@@ -58,6 +58,15 @@
 (require 'tramp)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; YaSnippets
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(require 'yasnippet)
+(yas-global-mode 1)
+
+;; "~/.emacs.d/snippets" is already on the "~/.emacs.d/snippets"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Show line and column numbers in all buffers
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -248,9 +257,17 @@
 (setq default-truncate-lines t) ;; disable line wrap
 (setq truncate-partial-width-windows nil) ;; make side by side buffers function the same as the main window
 
-;; auto complete
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Autocompletion
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (require 'auto-complete)
-(global-auto-complete-mode t)
+(require 'auto-complete-config)
+(ac-config-default)
+
+;; Add yasnippet to default ac-sources.
+;; See the code of auto-complete-config for more detauils. 
+(setq-default ac-sources (append '(ac-source-yasnippet) ac-sources))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Calendar
