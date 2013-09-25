@@ -64,6 +64,87 @@
   (exec-path-from-shell-initialize))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Spell checking
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(require 'flyspell)
+(require 'ispell)
+
+;; Aspell на MacOS установился по-умолчанию.
+;; Поэтому не трогаем.
+;(setq ispell-program-name "aspell")
+
+;; (setq my-english-dictionary-data ; English
+;; 	  `("english"
+;; 		"[a-zA-Z]"
+;; 		"[^a-zA-Z]"
+;; 		"[']"
+;; 		nil
+;; 		("-d" "en")
+;; 		nil iso-8859-1))
+
+;; (setq my-russian-dictionary-data ; Russian
+;; 	  '("russian"
+;; 		"[АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюя]"
+;; 		"[^АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюя]"
+;; 		"[-]"
+;; 		nil
+;; 		("-C" "-d" "ru")
+;; 		nil utf-8))
+
+;; (setq my-default-dictionary-data  ; Default
+;; 	  '(nil
+;; 		"[A-Za-z]"
+;; 		"[^A-Za-z]"
+;; 		"[']"
+;; 		nil
+;; 		("-C")
+;; 		nil iso-8859-1))
+
+;; (defun my-flyspell-russian ()
+;;   (interactive)
+;;   (flyspell-mode t)
+;;   (ispell-change-dictionary my-ispell-russian-dictionary)
+;;   (flyspell-buffer)
+;;   (message "Russian dictionary - Spell Checking completed."))
+
+;; (defun my-flyspell-english ()
+;;   (interactive)
+;;   (flyspell-mode t)
+;;   (ispell-change-dictionary my-ispell-english-dictionary)
+;;   (flyspell-buffer)
+;;   (message "English dictionary - Spell Checking completed."))
+
+;; (add-hook 'flyspell-mode-hook
+;;     '(lambda ()
+;; 	   (setq my-ispell-dictionary-alist
+;; 			 `(my-english-dictionary-data 
+;; 			   my-russian-dictionary-data 
+;; 			   my-default-dictionary-data))
+;; 	   (setq
+;; 		my-ispell-russian-dictionary "russian"
+;; 		my-ispell-english-dictionary "english"
+;; 		flyspell-default-dictionary my-ispell-russian-dictionary
+;; 		ispell-dictionary my-ispell-english-dictionary
+;; 		ispell-local-dictionary my-ispell-russian-dictionary
+;; 		ispell-extra-args '("--sug-mode=ultra"))
+;; 	   t))
+
+(defun my-flyspell-english ()
+  (interactive)
+  (flyspell-mode t)
+  (ispell-change-dictionary "en")
+  (flyspell-buffer)
+  (message "English dictionary - Spell Checking completed."))
+
+(defun my-flyspell-russian ()
+  (interactive)
+  (flyspell-mode t)
+  (ispell-change-dictionary "ru")
+  (flyspell-buffer)
+  (message "Russian dictionary - Spell Checking completed."))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; TRAMP
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

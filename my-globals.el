@@ -47,6 +47,9 @@
 (global-set-key (kbd "C-c q") 'toggle-truncate-lines)
 (global-set-key (kbd "C-c f") 'fci-mode)
 
+(global-set-key (kbd "C-c s r") 'my-flyspell-russian)
+(global-set-key (kbd "C-c s e") 'my-flyspell-english)
+
 ;; ibuffer by default
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
 
