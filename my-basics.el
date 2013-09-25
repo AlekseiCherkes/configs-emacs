@@ -418,4 +418,12 @@
 
 ;(require 'zoom-frm')
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Helper functions (for my-machine-dependant.el
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun my-dired-if-exists (dir)
+  (if (file-exists-p dir)
+	  (dired dir)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
