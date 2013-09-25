@@ -20,13 +20,19 @@
 
 (defvar my-packages '(org auctex magit cmake-mode haskell-mode
 					  quack auto-complete fill-column-indicator 
-					  yasnippet)
+					  yasnippet exec-path-from-shell)
   "A list of packages to ensure are installed at launch.")
 
 (defun my-packages-installed-p ()
   (loop for p in my-packages
         when (not (package-installed-p p)) do (return nil)
-        finally (return t)))
+        finally (return 't)))
+
+(defun my-packages-list-not-installed ()
+  (loop for p in my-packages
+        when (not (package-installed-p p)) 
+		do (message "The package: " p " is not installed")
+		finally (return nil)))
 
 ;; Call it manually when package installation is needed
 ;; TODO(a_cherkes): something is not working
