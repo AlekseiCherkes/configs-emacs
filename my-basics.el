@@ -160,6 +160,16 @@
 ;; "~/.emacs.d/snippets" is already on the "~/.emacs.d/snippets"
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Projectile
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; It was С-с p by default, but I want to change that.
+(setq projectile-keymap-prefix (kbd "C-c C-p"))
+
+(require 'projectile)
+(projectile-global-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Show line and column numbers in all buffers
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
