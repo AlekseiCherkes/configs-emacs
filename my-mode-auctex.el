@@ -5,7 +5,7 @@
 (require 'tex-site)
 
 ; Enable PDF-mode by default
-(setq TeX-global-PDF-mode t)
+(setq TeX-PDF-mode t)
 
 ; Enable parse on load
 (setq TeX-parse-self t)
