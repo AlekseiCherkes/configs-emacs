@@ -50,6 +50,9 @@
 (global-set-key (kbd "C-c s r") 'my-flyspell-russian)
 (global-set-key (kbd "C-c s e") 'my-flyspell-english)
 
+;; expand-region
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 ;; ibuffer by default
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
 
