@@ -31,6 +31,8 @@
   (message "No machine dependant file where found."))
 
 ; load paths that are the same on all machines
+(find-file "my-basics.el")
+(find-file "my-globals.el")
 (dired "~/.emacs.d")
 (dired "~/")
 
