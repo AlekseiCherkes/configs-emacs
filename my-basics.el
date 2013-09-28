@@ -30,6 +30,10 @@
 (setq default-file-name-coding-system
  (if (eq system-type `windows-nt) `cp1251 `utf-8))
 
+;; Делаем возможным переключение на русскую раскладку путем нажатия
+;; C-\
+(setq default-input-method 'russian-computer)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; USEFULL
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
