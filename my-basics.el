@@ -184,10 +184,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; It was С-с p by default, but I want to change that.
-(setq projectile-keymap-prefix (kbd "C-c C-p"))
+;;(setq projectile-keymap-prefix (kbd "C-c C-p"))
 
-(require 'projectile)
-(projectile-global-mode)
+;;(require 'projectile)
+;;(projectile-global-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Expand-region
