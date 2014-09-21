@@ -440,7 +440,7 @@
 ;; -a -- скрытые файлы
 ;; -A -- все файлы кроме . и .. (включено для суперюзуров по умолчанию)
 ;; -h -- размер с суффиксами B, K, M, G, T
-(setq dired-listing-switches "-Al")
+(setq dired-listing-switches "-AXl --group-directories-first")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Autorevert mode
