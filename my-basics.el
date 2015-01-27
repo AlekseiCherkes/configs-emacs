@@ -2,7 +2,28 @@
 ;; Базовые настройки (не требуют установки дополнительных пкетов)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Helpers
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; System-type definition
+(defun system-is-linux()
+    (string-equal system-type "gnu/linux"))
+
+(defun system-is-windows()
+    (string-equal system-type "windows-nt"))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Server
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Start Emacs as a server on linux
+(when (system-is-linux)
+    (require 'server)
+    (unless (server-running-p)
+        (server-start)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Корректная работа с UTF-8 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -235,8 +256,9 @@
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 
 (setq scroll-step 1) ;; keyboard scroll one line at a time
-(setq scroll-conservatively 10000)
+(setq scroll-conservatively 10000) ;; Что-то про передвижение экрана, когда курсор не видим на нем.
 (setq auto-window-vscroll nil)
+(setq scroll-margin 5) ;; сдвигать буфер верх/вниз когда курсор в 10 шагах от верхней/нижней границы  
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; EFFECTIVE EMACS
@@ -392,6 +414,9 @@
 (setq default-truncate-lines t) ;; disable line wrap
 (setq truncate-partial-width-windows nil) ;; make side by side buffers function the same as the main window
 
+;; Display the name of the current buffer in the title bar
+(setq frame-title-format "GNU Emacs: %b")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Autocompletion
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -460,7 +485,21 @@
 
 ;(require 'zoom-frm')
 
+;;;;;;;q;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Color theme
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Темы можно посмотреть тут: 
+;; http://emacsthemes.caisah.info/
+;; http://gnuemacscolorthemetest.googlecode.com/svn/html/index-el.html
+;; 
+;; В emacs 24 появлился собственные механизм измения 
+;; цветовых схем. Внешние пакеты наподобие 'color-theme 
+;; устарели.
+
+(load-theme 'wombat t)
+
+;;;;;;;q;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Helper functions (for my-machine-dependant.el
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
