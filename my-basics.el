@@ -460,11 +460,13 @@
 
 (require 'dired-x)
 
+;; Add .fxo and hidden files to ommit mode.
 (add-to-list 'dired-omit-extensions ".fxo")
+(setq dired-omit-files (concat dired-omit-files "\\|^\\..+$"))
+
 (add-hook 'dired-mode-hook 
 	  (lambda () (dired-omit-mode 1)) 
 	  't) ;; APPEND
-
 
 ;; Ключи для комманды ls.
 ;; -l -- вывод в виде списка (обязтельна)
