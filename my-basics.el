@@ -82,6 +82,10 @@
 (setq display-time-24hr-format t)
 (display-time-mode t)
 
+;; Run Emacs maximized.
+;; Applies both server and clients.
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; EnvVariables
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
