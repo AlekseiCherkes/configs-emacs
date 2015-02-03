@@ -464,7 +464,7 @@
 
 (require 'dired-x)
 
-;; Add .fxo and hidden files to ommit mode.
+;; Add .fxo and hidden (dot) files to ommit mode.
 (add-to-list 'dired-omit-extensions ".fxo")
 (setq dired-omit-files (concat dired-omit-files "\\|^\\..+$"))
 
@@ -477,7 +477,7 @@
 ;; -a -- скрытые файлы
 ;; -A -- все файлы кроме . и .. (включено для суперюзуров по умолчанию)
 ;; -h -- размер с суффиксами B, K, M, G, T
-(setq dired-listing-switches "-AXl --group-directories-first")
+(setq dired-listing-switches "-AXlh --group-directories-first")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Autorevert mode
