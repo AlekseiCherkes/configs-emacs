@@ -2,8 +2,8 @@
 ;; INIT
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setq my-emacs-dir "~/.emacs.d/")
-(add-to-list `load-path my-emacs-dir)
+(setq my-emacs-dir (file-name-as-directory "~/.emacs.d"))
+(add-to-list `load-path (concat my-emacs-dir "lisp"))
 
 ; modules
 (load "my-package.el")
